@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selection Sort </title>
+</head>
+<body>
+    
+    
+</body>
+</html>
+<script>
+
+let arr=[12,14,15,13,16,11]
+
+    function selection(array)
+    { 
+         for(let i=0;i<array.length;i++)
+         {
+             let last=array.length - i - 1
+
+             let maxValue=getMax(array,0,last)
+
+             swap(array,maxValue,last)
+         }
+    }
+
+    function getMax(array,s,v)
+    {
+         let max=0;
+
+         for(let i=s;i<=v;i++)
+         {
+               if(array[i]>array[max])
+               {
+                   max=i
+               }
+         }
+         return max
+    }
+
+    function swap(array,m,l)
+    {
+         let t=array[m]
+         array[m]=array[l]
+         array[l]=t
+    }
+
+selection(arr)
+console.log(arr)
+</script>
+
+
