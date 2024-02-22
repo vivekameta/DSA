@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 1 </title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+   //1st ex : 
+
+    let Profit1 = 0;
+    let prices=[ 7 , 1 , 5 , 3 , 6 , 4 ]
+
+    for (let i = 0; i < prices.length-1; i++)
+    {
+        for (let j =i+1; j < prices.length; j++)
+        {
+            let pro = prices[j] - prices[i];
+
+            if (pro > Profit1)
+            {
+                Profit1 = pro;
+            }
+        }
+    }
+console.log(Profit1)
+
+   // 2nd ex:
+    let Profit2 = 0;
+ 
+    let prices2 = [ 7 , 6 , 4 , 3 , 1 ]
+
+    for (let i = 0 ; i < prices2.length - 1; i++)
+    {
+        for (let j = i + 1; j > prices2.length; j++)
+        {
+            let pro2 = prices2[j] - prices2[i];
+
+            if (pro2 > Profit2)
+            {
+                Profit2 = pro2;
+            }
+        }
+    }
+console.log(Profit2)    
+
+</script>
