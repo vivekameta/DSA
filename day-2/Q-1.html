@@ -15,27 +15,32 @@
 
     function bubbaleshort(arr)
     { 
-        for(let i=0;i<arr.length;i++)  // 3
+        for(let i=0;i<arr.length;i++)  
         {
-            for(let j=0;j<arr.length-1;j++) //4 
+            for(let j=0;j<arr.length;j++) 
             {
-                if(arr[j]>arr[j+1]) // 2
+                if(arr[j]>arr[j+1]) 
                 {
-                     let p=arr[j]; //1
-                     arr[j]=arr[j+1]; //2
-                     arr[j+1]=p; //2
+                     let p=arr[j];
+                     arr[j]=arr[j+1];
+                     arr[j+1]=p;
                 }
             }
         }
-        return arr; //1
+        return arr;
          
     }
     console.log(bubbaleshort(arr))
+    
 
 
-    // 3m*4n +2+1+2+2+1
 
-    // 3m*4n+8
+
+
+   
+
+
+   
 
     
 
