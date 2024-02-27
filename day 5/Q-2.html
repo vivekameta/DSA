@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    
+    function element(value)
+    {
+        this.value=value
+        this.next=null
+    }
+
+    let el1=new element(102)
+    let el2=new element(250)
+    let el3=new element(803)
+    let el4=new element(790)
+    let el5=new element(1200)
+
+
+   el1.next=el2
+   el2.next=el3
+   el3.next=el4
+   el4.next=el5
+
+
+
+    let curr=el1
+
+    while(curr!=null)
+    {
+        console.log(curr.value)
+        curr=curr.next
+    }
+
+</script>
