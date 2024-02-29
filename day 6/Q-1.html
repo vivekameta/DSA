@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    function node(value)
+    {
+       this.value=value
+       this.next=null
+    }
+
+   let p1=new node('k')
+   let p2=new node('a')
+   let p3=new node('n')
+   let p4=new node('a')
+   let p5=new node('k')
+
+   p1.next=p2
+   p2.next=p3
+   p3.next=p4
+   p4.next=p5
+
+   function palindrome(head)
+   {
+    curr=head
+    let arr=[]
+
+    while(curr!=null)
+    {
+         arr.push(curr.value)
+         curr=curr.next
+    }
+    return arr.join('')==arr.reverse().join('')
+   }
+ console.log(palindrome(p1))
+
+</script>
