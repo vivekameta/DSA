@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+let nums=[3,3]
+let t=6
+
+
+function bs(nums,t)
+{
+    let sum
+    let arr=[]
+     
+    for(let i=0;i<nums.length;i++)
+    {
+       if(nums===t)
+       {
+           break
+       }
+       else{
+           sum+nums[i]
+           arr.push(i)
+        
+       }
+    }
+    return  arr
+    
+}
+console.log(bs(nums,t))
+
+
+</script>
