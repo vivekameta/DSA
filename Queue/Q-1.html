@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    class Queue{
+     
+        constructor(){
+             this.queue=[]
+
+        }
+
+        enquue(el)
+        {
+            this.queue.push(el)
+        }
+        size()
+        {
+            return this.queue.length
+        }  
+        isEmpty()
+        {
+            return this.queue.length===0
+        }
+        dequeue()
+        {
+            if(this.isEmpty())
+            {
+                return "Queue is Empty"
+            }
+            else{
+                 return this.queue.shift()
+            }
+        }
+
+        front()
+        {
+            if(this.isEmpty())
+            {
+                return "Queue is Empty"
+
+            }
+            else
+            {
+                return this.queue[0]
+            }
+        }
+
+     
+    }
+
+    let queue=new Queue
+    queue.enquue(20)
+    queue.enquue(50)
+    queue.enquue(80)
+    queue.enquue(100)
+
+
+    console.log("Array is = ",queue)
+    console.log("Size of Array is = ",queue.size())
+    console.log("Empty or not = ",queue.isEmpty())
+    console.log("Array remove First element is = ",queue.dequeue())
+    console.log("Array First Element is = ",queue.front())
+</script>
