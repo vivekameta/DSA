@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+  
+  let s="anagram"
+  let t="nagaram"
+
+  function Str(s,t){
+     let stack=[]
+     let stack2=[]
+    
+  if(s.length!=t.length)
+  {
+     return false
+  }
+ 
+
+   for(let i=0;i<s.length;i++)
+   {
+    stack.push(s[i])
+   }
+
+
+   for(let j=0;j<t.length;j++)
+   {
+    stack2.push(t[j])
+   }
+
+
+  stack.sort()
+  
+  stack2.sort()
+
+   while(stack.length>0)
+   {
+       if(stack.pop()!==stack2.pop())
+       {
+           return false
+       }
+   }
+   return true
+
+     
+  }
+  console.log(Str(s,t))
+  
+
+</script>
+
+
+<!-- 
+    
+//     function rev(s,t){
+    //    let stacks = []
+    //    let stackt = []
+    //    if (s.length !== t.length) {
+    //         return false;
+    //     }
+    //     for (let i = 0; i < s.length; i++) {
+    //         stacks.push(s[i]);
+    //         stackt.push(t[i]);
+    //     }
+    
+    //     stacks.sort()
+    //     stackt.sort()
+    
+    //     while (stacks.length > 0) {
+          
+    //         if (stacks.pop() !== stackt.pop()) {
+    //             return false; 
+    //         }
+    //     }
+    
+       
+    //     return true;
+    
+    //     }
+    //     console.log(rev("anagram", "nagaram"))
+    // -->
